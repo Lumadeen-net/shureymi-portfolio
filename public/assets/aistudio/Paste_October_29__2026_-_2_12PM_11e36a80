@@ -1,0 +1,1120 @@
+# MASTER DEVELOPMENT PROMPT
+## Project: Shureymi Haji — Personal Portfolio Website
+
+### 1. Project Overview
+
+You are an expert frontend developer, UI/UX designer, creative director, and React engineer.
+
+Your task is to build a sophisticated, cinematic, interactive, and fully responsive personal portfolio website for **Shureymi Haji**, a Kenyan student, software developer, community leader, and aspiring economist and public leader from Northeastern Kenya.
+
+This is a personal portfolio intended for college admissions officers, potential collaborators, and visitors who want to understand the person behind the academic achievements.
+
+The website must communicate:
+
+- My personal journey from Mandera, Northeastern Kenya, to Starehe Boys' Centre & School.
+- My interest in economics, finance, technology, and entrepreneurship.
+- My experience in software development and practical problem-solving.
+- My leadership responsibilities and community service.
+- My love for literature, philosophy, and influential thinkers.
+- My involvement in youth empowerment and digital education.
+- My vision for transforming Mandera and contributing to Kenya's development.
+- My long-term ambition to gain professional expertise, become financially independent, and eventually pursue public leadership.
+
+The website should feel like entering my personal world.
+
+It must be visually memorable while remaining authentic, intellectually engaging, and easy to navigate.
+
+Avoid generic developer portfolio templates, exaggerated marketing language, and excessive animations.
+
+**Primary design concept:** A cinematic personal world with an immersive homepage and eight carefully designed destination pages.
+
+---
+
+### 2. Technology Stack
+
+Use the following technologies:
+
+**Frontend**
+- React with Vite
+- JavaScript and JSX
+- Tailwind CSS
+- Motion for React (formerly Framer Motion)
+- React Router
+- Lucide React icons
+
+**Styling**
+- Custom CSS where Tailwind is insufficient
+- CSS Grid and Flexbox
+- Responsive typography using `clamp()`
+- Glassmorphism with translucent backgrounds and backdrop blur
+- Carefully controlled shadows, gradients, and hover states
+
+**Deployment**
+- Vercel
+
+**Architecture**
+- Component-based
+- Reusable UI components
+- Organized project structure
+- Data-driven navigation and content where appropriate
+- No backend or database required for the initial version
+
+Use the existing project structure where possible. Inspect the current files before modifying them.
+
+Do not introduce unnecessary libraries.
+
+---
+
+### 3. Overall Design Language
+
+The website should combine:
+
+1. Cinematic visual storytelling.
+2. Modern, refined web design.
+3. Editorial typography.
+4. Subtle technical aesthetics.
+5. A personal and reflective atmosphere.
+
+**Color palette**
+
+Use a dark cinematic palette inspired by the generated homepage artwork.
+
+Suggested colors:
+
+- Primary background: `#100C0A`
+- Secondary background: `#1C1511`
+- Warm gold accent: `#D6A86A`
+- Soft ivory text: `#F5EBDD`
+- Secondary text: `#C9B9A6`
+- Subtle borders: `rgba(255, 220, 170, 0.25)`
+
+These are starting points, not rigid requirements.
+
+The design should have warm amber highlights, deep shadows, and restrained use of gold.
+
+Avoid neon colors, overly bright gradients, excessive glowing effects, and generic dashboard aesthetics.
+
+**Typography**
+
+Use:
+
+- Playfair Display or a comparable editorial serif for major headings.
+- DM Sans or Inter for body text, navigation, and UI elements.
+
+Headings should be expressive without becoming difficult to read.
+
+Body text should be comfortable for long-form reading.
+
+Use consistent spacing and typography throughout the website.
+
+---
+
+# PART I: CINEMATIC HOMEPAGE
+
+### 4. Homepage Background
+
+The homepage must use the cinematic background image already included in the project's public assets.
+
+The image represents me sitting at the center of a study environment, surrounded by objects representing my interests and ambitions.
+
+The artwork includes references to:
+
+- Gifted Hands by Ben Carson
+- Think Big by Ben Carson
+- Think and Grow Rich by Napoleon Hill
+- Philosophy and influential quotations
+- Software development and coding
+- Economics, finance, and entrepreneurship
+- Al-Muttaqeen Organisation
+- Youth empowerment
+- Mandera and Kenya
+- Education, leadership, and community service
+
+**Critical requirement:**
+
+The background image must remain separate from the navigation interface.
+
+Do not embed navigation cards, buttons, or website text into the background image.
+
+Use the provided artwork as an image asset, with the eight navigation cards implemented as actual React components.
+
+Do not regenerate the background or replace it with a generic stock image.
+
+The image must:
+
+- Fill the homepage naturally.
+- Preserve the central subject as much as possible.
+- Remain sharp on desktop screens.
+- Crop intelligently on smaller screens.
+- Avoid distortion and stretching.
+- Use subtle gradients to maintain text readability.
+
+Consider using a dedicated image element with `object-fit: cover` and responsive `object-position`, or a CSS background with carefully defined breakpoints.
+
+If mobile cropping makes the subject difficult to see, adjust the layout rather than shrinking the entire image unnaturally.
+
+The background should remain static or have only extremely subtle motion.
+
+---
+
+### 5. Homepage Layout
+
+The homepage should occupy at least the full viewport height.
+
+The basic composition:
+
+**Top section**
+
+Left:
+`SHUREYMI HAJI`
+
+Right:
+`CURIOSITY • SERVICE • LEADERSHIP`
+
+Use elegant typography and generous spacing.
+
+**Middle section**
+
+The cinematic background should dominate the visual experience.
+
+Keep the central figure clearly visible.
+
+Avoid placing large headings or interface elements directly over the face.
+
+**Lower section**
+
+Display eight animated glass-style navigation cards.
+
+The cards should be positioned near the lower portion of the homepage.
+
+**Bottom section**
+
+Display the personal vision statement:
+
+"A more educated, empowered and prosperous Mandera. A stronger, fairer Kenya."
+
+Treat this as a personal vision statement, not an attributed quotation.
+
+Use restrained serif typography.
+
+---
+
+### 6. Eight Interactive Navigation Cards
+
+Create exactly eight navigation cards.
+
+Each card must navigate to a dedicated route.
+
+**Card 1: My Story**
+- Route: `/story`
+- Icon: User
+- Subtitle: From Mandera to Starehe
+
+**Card 2: Projects**
+- Route: `/projects`
+- Icon: Code
+- Subtitle: Software, ideas and what I'm building
+
+**Card 3: Leadership**
+- Route: `/leadership`
+- Icon: Users
+- Subtitle: School, community and service
+
+**Card 4: Books & Ideas**
+- Route: `/ideas`
+- Icon: BookOpen
+- Subtitle: Writers, quotes and questions I live by
+
+**Card 5: Mandera & Kenya**
+- Route: `/mandera`
+- Icon: MapPin
+- Subtitle: The change I hope to help build
+
+**Card 6: Writing**
+- Route: `/writing`
+- Icon: PenLine
+- Subtitle: Reflections, essays and thoughts
+
+**Card 7: Résumé**
+- Route: `/resume`
+- Icon: FileText
+- Subtitle: Experience, skills and achievements
+
+**Card 8: Contact**
+- Route: `/contact`
+- Icon: Send
+- Subtitle: Let's connect
+
+Each card should contain:
+
+- A small icon.
+- A subtle numerical identifier, such as `01`.
+- A prominent title.
+- A short subtitle.
+- A small directional arrow.
+
+**Card styling**
+
+Use:
+
+- Semi-transparent dark backgrounds.
+- Backdrop blur.
+- Thin warm-gold borders.
+- Rounded corners.
+- Subtle shadowing.
+- Clear text hierarchy.
+
+The cards should resemble refined interactive glass panels.
+
+Avoid making them excessively transparent, as readability is essential.
+
+**Desktop layout**
+
+Use a four-column, two-row grid.
+
+**Tablet layout**
+
+Use two columns and four rows, adjusting card height and spacing.
+
+**Mobile layout**
+
+Use two columns where practical.
+
+On very narrow screens, allow a single-column layout if necessary to preserve readability.
+
+All eight cards must remain accessible without horizontal scrolling.
+
+The homepage may scroll vertically on mobile. Do not force all content into a single viewport if this makes the cards too small.
+
+---
+
+### 7. Homepage Entrance Animation
+
+Implement a cinematic entrance sequence using Motion for React.
+
+**Phase 1: Background entrance**
+
+Duration: approximately 0–0.6 seconds.
+
+- Background fades in.
+- Subtle scale animation from approximately 1.04 to 1.
+- Use smooth easing.
+
+**Phase 2: Header entrance**
+
+Duration: approximately 0.6–1.2 seconds.
+
+- Name fades into view.
+- Tagline appears.
+- Slight upward movement.
+
+**Phase 3: Navigation entrance**
+
+Beginning around 1.2 seconds.
+
+- Eight cards animate upward into view.
+- Use staggered delays.
+- Each card transitions from slightly lower position and reduced opacity.
+- Total sequence should finish around two seconds.
+
+**Phase 4: Final state**
+
+After the entrance:
+
+- All navigation cards are interactive.
+- Background remains stable.
+- Hover animations are enabled.
+
+Avoid dramatic bouncing or distracting animation.
+
+**Important behavior**
+
+The full entrance sequence should run on the visitor's first homepage load.
+
+When navigating back to the homepage during the same browsing session, avoid replaying the entire sequence unnecessarily.
+
+Use session storage if appropriate.
+
+Respect the user's `prefers-reduced-motion` setting.
+
+Ensure the interface remains usable even if animations are disabled.
+
+---
+
+### 8. Card Hover Interactions
+
+On desktop:
+
+When hovering over a card:
+
+- Translate upward by approximately 4–6 pixels.
+- Slightly brighten the border.
+- Increase the background opacity.
+- Add a restrained shadow.
+- Animate the directional arrow slightly upward and to the right.
+
+Animation duration: approximately 250–350 milliseconds.
+
+Use smooth easing.
+
+On mobile:
+
+Do not rely on hover.
+
+Provide clear touch feedback and visible focus states.
+
+Every card must be keyboard accessible.
+
+---
+
+# PART II: DESTINATION PAGES
+
+### 9. General Page Design
+
+All eight destination pages should share a consistent design system.
+
+Each page should have:
+
+- A minimal navigation header.
+- A visible link back to the homepage.
+- A clear page title.
+- An optional short introductory statement.
+- A content area with comfortable reading width.
+- A subtle entrance transition.
+- A consistent footer.
+
+Avoid repeating the cinematic homepage background on every page.
+
+The inner pages should feel quieter and more editorial.
+
+Use dark backgrounds, elegant typography, subtle dividers, and generous spacing.
+
+Do not add generic stock photographs.
+
+Most content should be presented through writing, diagrams, project interfaces, timelines, and carefully designed typography.
+
+Do not invent personal achievements, experiences, dates, quotations, or statistics.
+
+Use clearly marked placeholders when information has not been provided.
+
+---
+
+### 10. Page One: My Story
+
+**Route:** `/story`
+
+**Purpose:** Explain my background, upbringing, education, and personal development.
+
+Suggested sections:
+
+**Introduction**
+
+A personal introduction that establishes where I come from and what has shaped my interests.
+
+**Growing Up in Mandera**
+
+Discuss my connection to Northeastern Kenya, the Somali community, and my observations about educational opportunity and community life.
+
+Avoid stereotypes or presenting Mandera only through hardship.
+
+**My Journey to Starehe**
+
+Discuss attending Starehe Boys' Centre & School, academic development, adapting to a competitive environment, and learning responsibility.
+
+**Finding My Voice**
+
+Explore my development from a relatively quiet student into someone willing to take on leadership responsibilities.
+
+**Beyond the Classroom**
+
+Discuss how my interests expanded into software development, economics, community work, and entrepreneurship.
+
+**Looking Ahead**
+
+Describe the knowledge and experience I hope to acquire.
+
+**Design suggestions**
+
+Use a vertical timeline, pull quotes from my own writing, and expandable reflections.
+
+Keep the writing natural and specific.
+
+Do not simply reproduce a college admissions personal statement.
+
+---
+
+### 11. Page Two: Projects
+
+**Route:** `/projects`
+
+**Purpose:** Demonstrate my technical skills through real work.
+
+Create a project gallery with individual project detail views.
+
+Initial projects:
+
+**Gamachu POS**
+- React
+- Supabase
+- Sales and inventory workflows
+- Receipt printing
+
+**Habitry**
+- Habit tracking application
+- Authentication and data management
+- User interface design
+- Personal productivity features
+
+**Parcel Logistics Application**
+- Parcel management
+- Tracking workflows
+- Logistics-oriented software design
+
+**Additional Experience**
+
+UrbanTech Dev Company internship, involving business operations and software deployment.
+
+Each project should have:
+
+- Project title.
+- Short problem statement.
+- Technologies used.
+- Features actually implemented.
+- My specific contribution.
+- Challenges encountered.
+- Lessons learned.
+- GitHub link, if available.
+- Live demo link, if available.
+
+Use interactive cards with clean layouts.
+
+Do not fabricate screenshots or working demos.
+
+If actual screenshots are unavailable, use attractive text-based project cards with icons and technical metadata.
+
+Allow future expansion.
+
+---
+
+### 12. Page Three: Leadership
+
+**Route:** `/leadership`
+
+**Purpose:** Present my leadership experiences and community work.
+
+Include sections for:
+
+**Al-Muttaqeen Organisation**
+
+My involvement in coordinating community service, youth initiatives, orphanage visits, food distributions, mentorship, and fundraising.
+
+**School Leadership**
+
+Roles including:
+
+- House Prefect
+- Mosque Captain
+- Deputy Chairperson, Starehe Muslim Society
+- Other confirmed school responsibilities
+
+**Youth Digital Empowerment**
+
+My work teaching digital literacy and practical computer skills to young people.
+
+Topics include:
+
+- Computer basics
+- Email and digital communication
+- CV preparation
+- Online services
+- Digital opportunities
+
+**Leadership Reflections**
+
+Short reflections on responsibility, listening, patience, and understanding the circumstances of other people.
+
+Use timelines, impact summaries, and short written case studies.
+
+Verify all numerical claims before publishing them.
+
+Avoid presenting volunteer work as personal heroism.
+
+Focus on the work, the people involved, and what was learned.
+
+---
+
+### 13. Page Four: Books & Ideas
+
+**Route:** `/ideas`
+
+**Purpose:** Show the intellectual interests that shape my thinking.
+
+This page should be one of the most distinctive parts of the website.
+
+Suggested title:
+
+**The Bookshelf: Ideas I Return To**
+
+Initial books to feature:
+
+- Gifted Hands — Ben Carson
+- Think Big — Ben Carson
+- Think and Grow Rich — Napoleon Hill
+
+Allow additional books to be added later.
+
+For each book, create an interactive editorial card containing:
+
+- Book title.
+- Author.
+- Subject or category.
+- Personal reflection.
+- An idea that challenged or influenced me.
+- How I relate the idea to my experiences.
+
+Do not invent my personal interpretations. Use editable placeholders until I provide them.
+
+**Quotations section**
+
+Create a section for quotations from thinkers including Ben Carson and Aristotle.
+
+Use only quotations with verified wording and attribution.
+
+Each quotation should be accompanied by my own explanation of why it matters.
+
+Do not fill the page with generic motivational quotations.
+
+**Questions I'm Exploring**
+
+Include thought-provoking questions about:
+
+- Economic inequality.
+- Education in underserved communities.
+- Technology and opportunity.
+- Entrepreneurship.
+- Public leadership.
+- Community development.
+
+Present these as questions I am interested in exploring, rather than conclusions I have already reached.
+
+**Design**
+
+Use elegant typography, editorial cards, subtle hover interactions, and expandable reflections.
+
+Do not require book-cover images.
+
+---
+
+### 14. Page Five: Mandera & Kenya
+
+**Route:** `/mandera`
+
+**Suggested title:** The Mandera I Hope to See
+
+**Purpose:** Present my long-term vision for my community and country.
+
+This page should be thoughtful, grounded, and personal.
+
+Organize it into the following sections.
+
+**The Place I Call Home**
+
+Explain my connection to Mandera and the people who live there.
+
+**What I Have Observed**
+
+Discuss challenges I have personally encountered or observed, especially around education, technology access, employment opportunities, and public services.
+
+Avoid unsupported statistics.
+
+**Education**
+
+Explore ideas for improving educational opportunity, digital learning, mentorship, and access to resources.
+
+**Technology and Youth Empowerment**
+
+Discuss how digital literacy, software, and entrepreneurship could create opportunities for young people.
+
+Connect this to my existing digital empowerment work.
+
+**Economics and Local Enterprise**
+
+Discuss my interest in understanding how businesses grow, how capital is allocated, and how economic policy affects communities.
+
+**Public Leadership**
+
+Explain my long-term interest in becoming a capable professional, gaining expertise in economics and finance, and eventually considering elected public service.
+
+Do not portray political office as an achievement already attained.
+
+**My Approach**
+
+Distinguish between:
+
+1. What I have observed.
+2. What I have already done.
+3. What I hope to learn.
+4. What I eventually want to pursue.
+
+**Design**
+
+Use a long-form editorial layout with clear sections and subtle visual elements.
+
+Consider a stylized map motif or CSS-based geographic patterns, without relying on stock photography.
+
+---
+
+### 15. Page Six: Writing
+
+**Route:** `/writing`
+
+**Purpose:** Provide a home for original essays, reflections, and personal notes.
+
+Create a lightweight writing system using Markdown or MDX, if appropriate.
+
+Suggested categories:
+
+- Economics
+- Technology
+- Leadership
+- Books and Philosophy
+- Community
+- Personal Reflections
+
+Each article should have:
+
+- Title.
+- Publication date.
+- Category.
+- Short description.
+- Estimated reading time.
+- Article content.
+
+Create a writing index page and individual article routes.
+
+Provide an elegant reading experience.
+
+Use readable typography, sensible line spacing, and a restrained content width.
+
+Do not generate fictional personal essays and present them as mine.
+
+Use sample placeholder articles clearly marked as drafts.
+
+Make adding new articles straightforward.
+
+---
+
+### 16. Page Seven: Résumé
+
+**Route:** `/resume`
+
+**Purpose:** Present a clear overview of my academic background, activities, and skills.
+
+Include sections for:
+
+**Education**
+- Starehe Boys' Centre & School
+- Kenya Certificate of Secondary Education
+
+**Leadership**
+- School leadership roles
+- Al-Muttaqeen Organisation
+- Community initiatives
+
+**Technical Skills**
+- React
+- JavaScript
+- HTML and CSS
+- Tailwind CSS
+- Supabase
+- Firebase
+- Git and related development tools
+
+**Experience**
+- Software development projects
+- UrbanTech Dev internship
+- Community teaching and volunteering
+
+**Honors and Awards**
+
+Include only verified achievements.
+
+**Download Résumé**
+
+Create a prominent button that downloads a PDF résumé.
+
+Do not generate a résumé containing unverified information.
+
+Until a final PDF is provided, display a clearly labeled placeholder state rather than a broken download button.
+
+Use a clean, professional layout.
+
+---
+
+### 17. Page Eight: Contact
+
+**Route:** `/contact`
+
+**Purpose:** Allow visitors to contact me professionally.
+
+Keep the design minimal.
+
+Include:
+
+- A short introduction.
+- Email contact, once provided.
+- GitHub profile, once provided.
+- LinkedIn profile, once provided.
+- Other professional links if relevant.
+
+Do not invent email addresses, usernames, or social links.
+
+Do not display personal phone numbers or home addresses.
+
+A contact form is optional.
+
+If implementing a contact form, use a legitimate submission service with validation, spam protection, and clear feedback. Do not create a form that appears functional but silently discards messages.
+
+Until contact information is provided, use clearly marked placeholders.
+
+---
+
+# PART III: INTERACTIONS AND RESPONSIVENESS
+
+### 18. Navigation and Page Transitions
+
+Use React Router for client-side navigation.
+
+Implement smooth page transitions with Motion for React.
+
+Suggested transition:
+
+- Current page fades out briefly.
+- New page fades in with a slight upward movement.
+- Duration approximately 200–400 milliseconds.
+
+Avoid excessive page transition effects.
+
+Ensure navigation works with browser back and forward controls.
+
+Scroll to the top when entering a new page, where appropriate.
+
+Provide a clear way to return home from every destination page.
+
+Include a custom 404 page.
+
+---
+
+### 19. Responsive Design
+
+The website must work on:
+
+- Large desktop monitors.
+- Standard laptops.
+- Tablets.
+- Mobile phones.
+- Narrow mobile screens.
+
+Use responsive layouts rather than fixed dimensions.
+
+**Desktop**
+
+Prioritize the cinematic composition, four-column navigation grid, and generous spacing.
+
+**Tablet**
+
+Reduce spacing, adapt the navigation to two columns, and adjust the image crop.
+
+**Mobile**
+
+Ensure:
+
+- The central figure remains reasonably visible.
+- Navigation cards remain readable.
+- Text never overlaps the subject's face unnecessarily.
+- No horizontal overflow occurs.
+- Buttons have comfortable touch targets.
+- Inner pages have readable typography.
+- The homepage can scroll naturally.
+
+Test common viewport widths including 320px, 375px, 430px, 768px, 1024px, and 1440px.
+
+Do not use arbitrary fixed heights that cause content clipping.
+
+---
+
+### 20. Accessibility
+
+Follow modern accessibility practices.
+
+Requirements:
+
+- Semantic HTML.
+- Keyboard-accessible navigation.
+- Visible focus indicators.
+- Appropriate heading hierarchy.
+- Sufficient text contrast.
+- Descriptive link labels.
+- Respect for reduced-motion preferences.
+- Accessible icon usage.
+- Proper form labels where forms exist.
+
+Do not make important content accessible only through hover.
+
+The website should remain functional without animations.
+
+---
+
+### 21. Performance
+
+Optimize for fast loading.
+
+Requirements:
+
+- Avoid unnecessary JavaScript dependencies.
+- Optimize the cinematic background image.
+- Use modern image formats such as WebP or AVIF where appropriate.
+- Provide an appropriate fallback image.
+- Preload critical assets when useful.
+- Lazy-load noncritical components.
+- Avoid excessive blur filters on mobile.
+- Minimize layout shifts.
+- Keep animations GPU-friendly where possible.
+
+The cinematic background is the primary visual asset, so pay special attention to its loading performance.
+
+Use a compressed version without visibly degrading the image.
+
+---
+
+### 22. SEO and Metadata
+
+Implement basic SEO.
+
+Include:
+
+- Descriptive page titles.
+- Unique page descriptions.
+- Open Graph metadata.
+- Appropriate semantic structure.
+- A favicon or simple monogram.
+- Sitemap where appropriate.
+- Robots configuration.
+- Canonical URLs once the production domain is known.
+
+Do not invent a production domain.
+
+Use descriptive metadata that accurately represents the website.
+
+---
+
+# PART IV: PROJECT STRUCTURE
+
+### 23. Recommended Architecture
+
+Organize the application approximately as follows:
+
+```text
+shureymi-portfolio/
+├── public/
+│   ├── images/
+│   │   └── cinematic-bg.webp
+│   ├── favicon.svg
+│   └── resume.pdf
+│
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── PageLayout.jsx
+│   │   ├── home/
+│   │   │   ├── CinematicBackground.jsx
+│   │   │   ├── NavigationGrid.jsx
+│   │   │   └── NavigationCard.jsx
+│   │   ├── ui/
+│   │   │   ├── PageTransition.jsx
+│   │   │   ├── SectionHeading.jsx
+│   │   │   └── GlassCard.jsx
+│   │   └── projects/
+│   │       └── ProjectCard.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Story.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Leadership.jsx
+│   │   ├── Ideas.jsx
+│   │   ├── Mandera.jsx
+│   │   ├── Writing.jsx
+│   │   ├── Resume.jsx
+│   │   ├── Contact.jsx
+│   │   └── NotFound.jsx
+│   │
+│   ├── data/
+│   │   ├── navigation.js
+│   │   ├── projects.js
+│   │   ├── books.js
+│   │   └── experience.js
+│   │
+│   ├── styles/
+│   │   └── globals.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+You may adjust this architecture when justified, but maintain a clean and understandable structure.
+
+Avoid overengineering.
+
+---
+
+# PART V: CONTENT AND WRITING GUIDELINES
+
+### 24. Writing Style
+
+All written content must sound personal, grounded, and human.
+
+Avoid:
+
+- Generic motivational statements.
+- Excessively formal language.
+- Corporate marketing vocabulary.
+- Exaggerated claims.
+- Artificially inspirational conclusions.
+- Repetitive sentence structures.
+- Clichés about leadership and changing the world.
+- Unsupported achievements or statistics.
+- Fabricated experiences.
+
+Prefer specific observations, real experiences, and clear explanations.
+
+The website should reflect a thoughtful young person who is still learning and developing his ideas.
+
+Do not present me as an established political leader, economist, or successful entrepreneur.
+
+Where content requires information I have not supplied, create a clearly marked editable placeholder.
+
+Do not fill gaps by inventing personal details.
+
+---
+
+# PART VI: IMPLEMENTATION WORKFLOW
+
+### 25. Development Phases
+
+Follow this sequence.
+
+**Phase 1: Inspect and Prepare**
+
+- Inspect the existing project.
+- Identify reusable components.
+- Confirm the cinematic background asset is available.
+- Check dependencies.
+- Establish design tokens and global styles.
+
+**Phase 2: Build the Homepage**
+
+- Implement the full-screen cinematic background.
+- Build the header.
+- Create the eight navigation cards.
+- Implement the staggered entrance sequence.
+- Add hover and focus interactions.
+- Make the layout responsive.
+- Verify navigation.
+
+**Phase 3: Establish Inner Page Design**
+
+- Build the shared page layout.
+- Create reusable headings and content sections.
+- Implement navigation and transitions.
+- Add the 404 page.
+
+**Phase 4: Build the Eight Pages**
+
+- Implement each destination page.
+- Add verified content.
+- Use clearly marked placeholders where needed.
+- Ensure consistent design.
+
+**Phase 5: Polish**
+
+- Improve spacing and typography.
+- Optimize images.
+- Review mobile layouts.
+- Improve accessibility.
+- Fix animation issues.
+- Check page transitions.
+
+**Phase 6: Test**
+
+- Run the development server.
+- Run the production build.
+- Check for runtime errors.
+- Test all navigation links.
+- Test desktop and mobile layouts.
+- Test reduced-motion behavior.
+- Verify that no content overflows or becomes inaccessible.
+
+**Phase 7: Deployment Preparation**
+
+- Prepare the Vercel configuration.
+- Ensure client-side routes work on refresh.
+- Update README documentation.
+- Explain the deployment process.
+
+---
+
+### 26. Acceptance Criteria
+
+The project is complete when:
+
+- The homepage uses the supplied cinematic image.
+- The central subject remains visible on common screen sizes.
+- Exactly eight glass-style navigation cards appear.
+- All eight cards navigate to working pages.
+- The entrance animation follows the specified sequence.
+- The animation does not replay unnecessarily during the same session.
+- Hover and keyboard interactions work correctly.
+- All eight destination pages have coherent layouts.
+- No personal facts or achievements have been fabricated.
+- The website works on desktop, tablet, and mobile.
+- No horizontal overflow or broken navigation occurs.
+- Reduced-motion preferences are respected.
+- The application builds successfully for production.
+- The website is ready for further content development and Vercel deployment.
+
+---
+
+### 27. Final Instructions to Codex
+
+Act as the lead developer for this project.
+
+Begin by inspecting the existing codebase and identifying what has already been implemented.
+
+Preserve working functionality unless changes are necessary.
+
+Build the website with attention to visual detail, code quality, accessibility, and performance.
+
+Do not replace the intended design with a generic portfolio template.
+
+Do not add stock photographs or unnecessary decorative images.
+
+Use the cinematic background provided in the project.
+
+Keep the homepage visually striking and the inner pages thoughtful, readable, and restrained.
+
+When implementing personal content, distinguish confirmed information from placeholders.
+
+Make reasonable technical decisions independently, but do not invent biographical facts.
+
+**Start by implementing and perfecting the homepage, then proceed through the remaining phases.**
+
+After each major phase, explain what was implemented, what was tested, and what still needs attention.
+
+The final result should feel like a carefully designed personal website that I can continue developing throughout college and beyond.
