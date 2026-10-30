@@ -5,29 +5,31 @@ import { QuoteItem } from '../data/books';
 import { MilestoneItem, StoryChapter } from '../data/story';
 import { EducationEntry, ExperienceEntry, HonorAward } from '../data/resume';
 import { LeadershipRole, LeadershipReflection } from '../data/leadership';
-import { 
-  ArrowLeft, 
-  Settings, 
-  Quote, 
-  Globe, 
-  Database, 
-  Plus, 
-  Trash2, 
-  Edit3, 
-  Save, 
-  Lock, 
-  Unlock, 
-  CheckCircle2, 
+import {
+  ArrowLeft,
+  Settings,
+  Quote,
+  Globe,
+  Database,
+  Plus,
+  Trash2,
+  Edit3,
+  Save,
+  Lock,
+  CheckCircle2,
   Milestone,
   FileText,
-  Download, 
-  Upload, 
+  Download,
+  Upload,
   RotateCcw,
   Eye,
   X,
   ArrowUp,
   ArrowDown
 } from 'lucide-react';
+
+export const ADMIN_ACCESS_KEY = '##15983bbBBB';
+export const isValidAdminPasscode = (value: string) => value === ADMIN_ACCESS_KEY;
 
 export default function Admin() {
   const {
@@ -179,18 +181,14 @@ export default function Admin() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passcode === 'shureymi2026' || passcode === 'admin' || passcode === 'mandera') {
+    if (isValidAdminPasscode(passcode)) {
       setIsAuthenticated(true);
       sessionStorage.setItem('shureymi_admin_auth', 'true');
       setAuthError('');
     } else {
-      setAuthError('Incorrect access key. (Default passcode: shureymi2026)');
+      setAuthError('Incorrect access key.');
+      setPasscode('');
     }
-  };
-
-  const handleDirectUnlock = () => {
-    setIsAuthenticated(true);
-    sessionStorage.setItem('shureymi_admin_auth', 'true');
   };
 
   const handleSaveAll = () => {
@@ -357,17 +355,10 @@ export default function Admin() {
               </button>
             </form>
 
-            <div className="pt-4 border-t border-[#D6A86A]/15 text-center space-y-2">
+            <div className="pt-4 border-t border-[#D6A86A]/15 text-center">
               <p className="text-[11px] text-[#8F7F70]">
-                Author fast-track:
+                Restricted editorial access.
               </p>
-              <button
-                onClick={handleDirectUnlock}
-                className="text-xs text-[#D6A86A] hover:underline inline-flex items-center gap-1.5 font-medium"
-              >
-                <Unlock className="w-3.5 h-3.5" />
-                <span>Enter as Shureymi Haji</span>
-              </button>
             </div>
           </div>
         </div>
